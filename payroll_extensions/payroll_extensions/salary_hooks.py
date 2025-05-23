@@ -2,6 +2,8 @@ import frappe
 from frappe.utils import get_time, get_datetime, add_to_date, add_days
 
 def calculate_all_metrics(doc, method=None):
+    frappe.log_error("✅ Hook triggered", doc.name)
+
     employee = doc.employee
     start_date = doc.start_date
     end_date = doc.end_date
@@ -56,3 +58,5 @@ def calculate_all_metrics(doc, method=None):
     doc.custom_late_entries = int(late_seconds)
     doc.custom_early_exits = int(early_seconds)
     doc.custom_extended_leaves = extended_leaves
+
+    frappe.log_error("✅ Values Set", f"Late: {doc.custom_late_entries}, Early: {doc.custom_early_exits}, Leave: {doc.custom_extended_leaves}")
