@@ -9,6 +9,6 @@ has_website_theme = 0
 
 doc_events = {
     "Salary Slip": {
-        "on_submit": "payroll_extensions.salary_hooks.calculate_all_metrics"
+        "validate": "payroll_extensions.salary_hooks.calculate_all_metrics"
     }
 }
