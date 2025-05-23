@@ -3,5 +3,8 @@
 name = "payroll_extensions"
 version = "1.0.0"
 description = "Auto-calculates late entries, early exits, and extended leaves"
-authors = [{name = "Your Name", email = "your@email.com"}]
+authors = [{ name = "WebAppick", email = "your@email.com" }]
 dependencies = ["frappe"]
+
+[tool.setuptools.packages.find]
+where = ["payroll_extensions"]
