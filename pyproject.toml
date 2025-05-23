@@ -2,7 +2,6 @@
 [project]
 name = "payroll-extensions"
 version = "1.0.0"
-description = "Auto-calculate late entries, early exits, and extended leaves"
+description = "Salary Slip automation"
 authors = [{name = "Your Name", email = "you@example.com"}]
 dependencies = ["frappe"]
-dynamic = ["classifiers"]
