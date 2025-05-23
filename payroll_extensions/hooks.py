@@ -2,7 +2,7 @@ app_name = "payroll_extensions"
 app_title = "Payroll Extensions"
 app_publisher = "Your Name"
 app_description = "Auto-calculate late entry/early exits"
-app_email = "you@example.com"
+app_email = "your@email.com"
 app_license = "MIT"
 
 has_website_theme = 0

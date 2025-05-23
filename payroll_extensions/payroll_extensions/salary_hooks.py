@@ -12,10 +12,10 @@ def calculate_all_metrics(doc, method=None):
     threshold_time = get_time("10:00:00")
     threshold_hours = 9
 
-    attendance = frappe.get_all("Attendance", filters={
+    attendance = frappe.get_all("Attendance", filters={{
         "employee": employee,
         "attendance_date": ["between", [start_date, end_date]]
-    }, fields=["attendance_date", "in_time", "out_time", "status"])
+    }}, fields=["attendance_date", "in_time", "out_time", "status"])
 
     for a in attendance:
         if a.in_time:
@@ -35,9 +35,9 @@ def calculate_all_metrics(doc, method=None):
             else:
                 early_seconds += 1800
 
-    holidays = frappe.get_all("Holiday", filters={
+    holidays = frappe.get_all("Holiday", filters={{
         "holiday_date": ["between", [start_date, end_date]]
-    }, fields=["holiday_date"])
+    }}, fields=["holiday_date"])
     holiday_dates = [h.holiday_date for h in holidays]
     weekly_off_days = [5, 6]
 
