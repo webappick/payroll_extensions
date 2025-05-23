@@ -55,8 +55,9 @@ def calculate_all_metrics(doc, method=None):
         ):
             extended_leaves += 0.5
 
+    # Set values before save so ERPNext's salary structure can use them
     doc.custom_late_entries = int(late_seconds)
     doc.custom_early_exits = int(early_seconds)
     doc.custom_extended_leaves = extended_leaves
 
-    frappe.log_error("✅ Values Set", f"Late: {doc.custom_late_entries}, Early: {doc.custom_early_exits}, Leave: {doc.custom_extended_leaves}")
+    frappe.log_error("✅ Values set in doc", f"Late: {doc.custom_late_entries}, Early: {doc.custom_early_exits}, Leave: {doc.custom_extended_leaves}")
