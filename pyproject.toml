@@ -1,6 +1,6 @@
 
 [project]
-name = "payroll-extensions"
+name = "payroll_extensions"
 version = "1.0.0"
 description = "Salary Slip automation"
 authors = [{name = "Your Name", email = "you@example.com"}]

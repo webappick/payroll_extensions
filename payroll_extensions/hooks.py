@@ -1,7 +1,7 @@
 app_name = "payroll_extensions"
 app_title = "Payroll Extensions"
 app_publisher = "Your Name"
-app_description = "Custom salary metrics"
+app_description = "Auto-calculate late entry/early exits"
 app_email = "you@example.com"
 app_license = "MIT"
 
